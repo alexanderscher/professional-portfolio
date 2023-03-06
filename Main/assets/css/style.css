@@ -25,7 +25,6 @@ header {
 
 h1{
     margin-left: 20px;
-
 } 
 
 .menu-title, a{
@@ -45,10 +44,9 @@ main{
 .box{
     margin-top: 10px;
     display: flex;
-    flex-wrap: wrap;
-
-    
+    flex-wrap: wrap;  
 }
+
 .works {
     flex: 50%; 
     box-shadow: 0 0 0 1.5px black;
@@ -58,10 +56,6 @@ main{
     justify-content: center;
 }
 
-.works-hide {
-    display: none;
-    opacity: 0;
-}
 
 img {
     width: 50%;
@@ -77,3 +71,25 @@ img {
         flex: 100%;
     }
   }
+
+@media screen and (max-height: 500px) {
+    img {
+        display: None;
+    }
+  }
+
+@media screen and (max-height: 800px) {
+    .menu-title, a {
+        font-size: 60px;
+    }
+  }
+
+  @media screen and (max-height: 400px) {
+    .menu-title, a {
+        font-size: 40px;
+    }
+    #menuitem1 {
+        line-height: 60px;
+    }
+  }
+
