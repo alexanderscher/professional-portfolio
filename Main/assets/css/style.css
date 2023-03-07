@@ -1,5 +1,7 @@
 :root {
     --red: #d21e1e;
+    --border: 1.5px;
+    --black: black;
 }
 
 *{
@@ -9,19 +11,30 @@
 
 body{
     font-family: "GT Extended Bold","Helvetica Neue",Helvetica,sans-serif;
-    background-color: var(--red)
+    background-color: var(--red);
+    display: flex;
+
+    /* display: inline; */
+
 }
 
-header {
+nav {
     height: 100svh;
+    width: 40%;
 }
 
 .menu-item{
-    border-bottom: 2.5px solid rgb(0, 0, 0);
-    height: 25%;
-    display: block;
-    
+    height: auto;
 }
+
+main{
+    border-left: var(--border) solid var(--black);
+}
+
+.border-top{
+    border-top: var(--border) solid var(--black);
+}
+
 
 h1{
     margin-left: 20px;
@@ -29,67 +42,41 @@ h1{
 
 .menu-title, a{
 text-decoration: none;
-font-size: 100px;
-color: rgb(4, 0, 0);
-}
-
-#menuitem1 {
-    line-height: 106px;
-}
-
-main{
-    width: 100%
-}
-
-.box{
-    margin-top: 10px;
-    display: flex;
-    flex-wrap: wrap;  
-}
-
-.works {
-    flex: 50%; 
-    box-shadow: 0 0 0 1.5px black;
-    height: 50vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+font-size: 40px;
+font-weight: bold;
+color: var(--black);
 }
 
 
-img {
-    width: 50%;
-    background-color: var(--red);
+.works-row > #hidden {
+    display: none;
+
+}
+
+
+img{
+    width: 400px;
+    height: 100%;
+    padding-left: 16px;
     mix-blend-mode: multiply;
-    will-change: opacity;
     opacity: 1;
-    
+    border-left: var(--border) solid var(--black);
 }
 
-@media screen and (max-width: 800px) {
-    .works {
-        flex: 100%;
-    }
-  }
 
-@media screen and (max-height: 500px) {
-    img {
-        display: None;
-    }
-  }
+img:hover{
+    mix-blend-mode: normal;
+    cursor: pointer;
 
-@media screen and (max-height: 800px) {
+} 
+
+
+  @media screen and (max-width: 700px) {
     .menu-title, a {
-        font-size: 60px;
+        font-size: 20px;
     }
+
+
   }
 
-  @media screen and (max-height: 400px) {
-    .menu-title, a {
-        font-size: 40px;
-    }
-    #menuitem1 {
-        line-height: 60px;
-    }
-  }
 

@@ -9,41 +9,50 @@
   </head>
 
   <body>
-    <header>
-      <section class="menu-item">
+    <nav>
+      <article class="menu-item border-notop">
         <h1 id="menuitem1" class="menu-title">ALEX SCHER</h1>
-      </section>
-      <section class="menu-item">
-        <h1 id="menuitem2" class="menu-title">
-          <a href="#works">WORKS</a>
-        </h1>
-      </section>
-      <section class="menu-item">
+      </article>
+      <article class="menu-item border-top" >
+        <div class="works-row"> 
+          <h1 id="menuitem2" class="menu-title">
+            <a href="#works">WORKS</a>
+          </h1> 
+      </article>
+      <article class="menu-item border-top">
         <h1 id="menuitem3" class="menu-title">
           <a href="#about">ABOUT</a>
         </h1>
-      </section>
-      <section class="menu-item">
+      </article>
+      <article class="menu-item border-top">
         <h1 id="menuitem4" class="menu-title">
           <a href="#resume">RESUME</a>
         </h1>
-      </section>
-    </header>
+      </article>
+      <article class="menu-item border-top">
+        <h1 id="menuitem5" class="menu-title">
+          <a href="#contact">CONTACT</a>
+        </h1>
+      </article>
+    </nav>
     <main>
-      <section id="works" class="box">
-        <article class="works">
+      <section id="works">
+        <div id="hidden">
           <img src="./assets/images/Image-Coming-Soon-Placeholder.jpg" alt="" />
-        </article>
-        <article class="works">
+        </div>
+        <div id="hidden">
           <img src="./assets/images/Image-Coming-Soon-Placeholder.jpg" alt="" />
-        </article>
-        <article class="works">
+        </div>
+        <div id="hidden">
           <img src="./assets/images/Image-Coming-Soon-Placeholder.jpg" alt="" />
-        </article>
-        <article class="works">
+        </div>
+        <div id="hidden">
           <img src="./assets/images/Image-Coming-Soon-Placeholder.jpg" alt="" />
-        </article>
+        </div>
       </section>
+      <section id="about"></section>
+      <section id="resume"></section>
+      <section id="contact"></section>
     </main>
   </body>
 </html>
