@@ -12,27 +12,37 @@
 body{
     font-family: "GT Extended Bold","Helvetica Neue",Helvetica,sans-serif;
     background-color: var(--red);
-    display: flex;
+    display: flex;}
 
+body * {
+    transition: all .3s ease;
 }
-
 nav {
-    height: 100svh;
-    width: 40%;
-}
+    display: flex;
+    flex-direction: column;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    min-width: 400px;
+    opacity: 1;
+    background-color: var(--red);
+    z-index: 1;}
 
 main {
     border-left: var(--border) solid var(--black);
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: start;
+    height: fit-content;
+    width: 100%;
 }
 
 .menu-item{
     height: auto;
 }
-
 
 .border-top{
     border-top: var(--border) solid var(--black);
@@ -50,27 +60,37 @@ font-weight: bold;
 color: var(--black);
 }
 
+.works{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.work-item > p {
+    position: relative;
+    top: 10px;
+}
+
+.work-item {
+    margin: 40px 0 20px 40px;
+    display: flex;
+    flex-direction: column;
+}
+
 .image-container{
-    width: 500px;
     border: var(--border) solid var(--black);
     overflow: hidden;
-    height: 500px;
-    margin: 40px 0 20px 40px;
+
 }
 
 img{
-    /* width: 500px; */
     mix-blend-mode: multiply;
-    opacity: 1;
-    
-    
+    opacity: 1;   
 }
-
 
 img:hover{
     mix-blend-mode: normal;
     cursor: pointer;
-
 } 
 
 .menu-item > #hidden-contact {
@@ -81,27 +101,81 @@ img:hover{
     display: block;
 }
 
-#hidden-contact > a{
+#hidden-contact > a,
+#hidden-contact > ul{
     display: block;
     text-decoration: none;
     color: black;
     font-weight: bold;
     margin-left: 22px;
     font-size: 20px;
+    
 }
 
-/* .works{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-} */
+.li-about {
+    list-style: none;
+}
 
-  @media screen and (max-width: 700px) {
-    .menu-title, a {
-        font-size: 20px;
+
+.section-about {
+    margin-left: 40px;
+    margin-top: 60px;
+    margin-bottom: 100px;
+    
+}
+
+  @media screen and (max-width: 767px) {
+  
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .menu-title,  .menu-title > a{
+        font-size: 30px;
+        }
+
+    .border-top, .border-notop{
+        border-bottom: var(--border) solid var(--black);
+        border-top: none;
     }
 
 
+    .work-item > p {
+        position: relative;
+        top: -10px;
+        padding-left: 40px;
+        
+    }
+
+    main {
+        border-left: none;
+
+    }
+
+    .image-container{
+        border: var(--border) solid var(--black);
+        align-items: center;
+        margin: 40px 0 20px 40px;
+    }
+
   }
+
+@media (min-width:500px) {
+    .image-container {
+        max-width: 300px;
+        max-height:300px;
+        
+    }
+
+}
+@media (min-width:1060px) {
+    .image-container{
+        max-width: 600px;
+        max-height: 600px;
+    }
+}
+
+
 
 
